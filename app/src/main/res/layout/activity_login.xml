@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <include layout="@layout/layout_title"/>
+
+
+    <RelativeLayout
+        android:id="@+id/layout_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp">
+
+        <ImageView
+            android:id="@+id/iv_ic_phone"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_phone"
+            android:layout_marginTop="6dp"/>
+
+
+        <EditText
+            android:id="@+id/login_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-1dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toRightOf="@id/iv_ic_phone"
+            android:hint="输入手机号"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/layout_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_phone"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_ic_password"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_password"
+            android:layout_marginTop="6dp"/>
+
+
+        <EditText
+            android:id="@+id/login_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="输入密码"
+            android:inputType="textPassword"
+            android:layout_toRightOf="@id/iv_ic_password"
+            android:layout_marginEnd="10dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_radio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_password">
+
+
+
+        <RadioGroup
+            android:id="@+id/rg_identity"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="0dp"></View>
+
+            <RadioButton
+                android:id="@+id/radio_staff"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:text="求职者" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="0dp"></View>
+
+            <RadioButton
+                android:id="@+id/radio_boss"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:text="招聘者" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="0dp"></View>
+
+        </RadioGroup>
+
+
+    </RelativeLayout>
+
+
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_btn_bg"
+        android:layout_below="@id/layout_radio"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:text="登录"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/login_by_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="使用验证码登录"
+        android:layout_below="@id/btn_login"
+        android:layout_margin="10dp"/>
+
+
+    <TextView
+        android:id="@+id/login_to_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="还没有账号？去注册"
+        android:layout_below="@id/btn_login"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"/>
+
+
+
+</RelativeLayout>
